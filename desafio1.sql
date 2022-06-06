@@ -49,3 +49,12 @@ CREATE TABLE following(
   FOREIGN KEY (user_id) REFERENCES users(id),
   FOREIGN KEY (artist_id) REFERENCES artists(id)
 ) engine = InnoDB;
+
+CREATE TABLE reproduction_history(
+  user_id INT NOT NULL,
+  music_id INT NOT NULL,
+  reproduction_date DATETIME NOT NULL,
+  PRIMARY KEY (user_id, reproduction_date),
+  FOREIGN KEY (user_id) REFERENCES users(id),
+  FOREIGN KEY (music_id) REFERENCES musics(id)
+) engine = InnoDB;
