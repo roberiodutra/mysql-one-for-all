@@ -58,3 +58,10 @@ CREATE TABLE reproduction_history(
   FOREIGN KEY (user_id) REFERENCES users(id),
   FOREIGN KEY (music_id) REFERENCES musics(id)
 ) engine = InnoDB;
+
+INSERT INTO plans (name, value)
+VALUES
+  ('free', 0),
+  ('family', 7.99),
+  ('university', 5.99),
+  ('personal', 6.99);
