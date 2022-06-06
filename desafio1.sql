@@ -18,3 +18,8 @@ CREATE TABLE users(
   signature_date DATE NOT NULL,
   FOREIGN KEY (plan_id) REFERENCES plans(id)
 ) engine = InnoDB;
+
+CREATE TABLE artists(
+  id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(64) NOT NULL
+) engine = InnoDB;
