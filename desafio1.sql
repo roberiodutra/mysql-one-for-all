@@ -31,3 +31,13 @@ CREATE TABLE albums(
   release_year YEAR NOT NULL,
   FOREIGN KEY (artist_id) REFERENCES artists(id)
 ) engine = InnoDB;
+
+CREATE TABLE musics(
+  id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(100) NOT NULL,
+  duration INT NOT NULL,
+  album_id INT NOT NULL,
+  artist_id INT NOT NULL,
+  FOREIGN KEY (album_id) REFERENCES albums(id),
+  FOREIGN KEY (artist_id) REFERENCES artists(id)
+) engine = InnoDB;
