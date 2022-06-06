@@ -1,10 +1,10 @@
 SELECT
-  (SELECT Count(id)
+  (SELECT COUNT(id)
     FROM musics)
       AS cancoes,
-  (SELECT Count(id)
+  (SELECT COUNT(id)
     FROM artists)
       AS artistas,
-  (SELECT Count(id)
+  (SELECT COUNT(id)
     FROM albums)
       AS albuns;
