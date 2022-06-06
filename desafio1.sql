@@ -1,0 +1,11 @@
+DROP DATABASE IF EXISTS SpotifyClone;
+
+CREATE DATABASE SpotifyClone;
+
+USE SpotifyClone;
+
+CREATE TABLE plans(
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(64) NOT NULL,
+    value DECIMAL(4, 2) NOT NULL
+) engine = InnoDB;
