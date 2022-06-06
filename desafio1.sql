@@ -23,3 +23,11 @@ CREATE TABLE artists(
   id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
   name VARCHAR(64) NOT NULL
 ) engine = InnoDB;
+
+CREATE TABLE albums(
+  id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(64) NOT NULL,
+  artist_id INT NOT NULL,
+  release_year YEAR NOT NULL,
+  FOREIGN KEY (artist_id) REFERENCES artists(id)
+) engine = InnoDB;
